@@ -1,2 +1,2 @@
 # Walle Web Console
-walleWebConsole v1.0.0
+walleWebConsole v0.0.1
