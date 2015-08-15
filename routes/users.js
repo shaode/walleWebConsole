@@ -3,7 +3,8 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+ // res.send('This is Users Template:'+req.path);
+    res.render('users', { title: ' NodeJS Express Users' });
 });
 
 module.exports = router;
