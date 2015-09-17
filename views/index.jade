@@ -8,3 +8,8 @@ block content
       a(href='/') Home Template
     li
       a(href='/users') Users Template
+
+  #msg.msg-title
+    ul
+      each user in users
+        li #{user.name}
