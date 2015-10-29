@@ -7,16 +7,15 @@ var connection = mysql.createConnection({
     password : ''
 });
 /* GET home page. */
-
+connection.connect();
 
 router.get('/', function(req, res, next) {
     //res.render('index', { title: ' NodeJS Express Home' ,message:"test"});
-    connection.connect();
     connection.query('select * from walle_admin.users', function(err, rows, fields) {
-        if (err) throw err;
-        res.render('index', { title: ' NodeJS Express Home' ,users:rows});
+        if (err) throw err ;
+        res.render('index', { title: ' NodeJS Express Home' , users:rows , fields:fields});
     });
-    connection.end();
+    //connection.end();
 
 });
 
